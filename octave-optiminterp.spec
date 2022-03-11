@@ -20,7 +20,7 @@ Requires(postun): octave
 This package provides functions to perform a n-dimensional optimal
 interpolations of arbitrarily distributed data points with Octave.
 
-This package is part of external Octave-Forge collection.
+This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
