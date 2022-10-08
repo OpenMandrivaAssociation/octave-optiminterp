@@ -4,12 +4,13 @@ Summary:	An optimal interpolation toolbox for Octave
 Name:		octave-%{octpkg}
 Version:	0.3.7
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://octave.sourceforge.io/%{octpkg}/
 
 BuildRequires:	octave-devel >= 4.0.0
+BuildRequires:	gomp-devel
 
 Requires:	octave(api) = %{octave_api}
 
