@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 
 BuildRequires:	octave-devel >= 4.0.0
 BuildRequires:	gomp-devel
@@ -20,8 +20,6 @@ Requires(postun): octave
 %description
 This package provides functions to perform a n-dimensional optimal
 interpolations of arbitrarily distributed data points with Octave.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
