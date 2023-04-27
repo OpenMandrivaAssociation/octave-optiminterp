@@ -1,15 +1,15 @@
 %global octpkg optiminterp
 
 Summary:	An optimal interpolation toolbox for Octave
-Name:		octave-%{octpkg}
+Name:		octave-optiminterp
 Version:	0.3.7
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
+Url:		https://packages.octave.org/optiminterp/
+Source0:	https://downloads.sourceforge.net/octave/optiminterp-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 4.0.0
+BuildRequires:  octave-devel >= 4.0.0
 BuildRequires:	gomp-devel
 
 Requires:	octave(api) = %{octave_api}
@@ -18,24 +18,23 @@ Requires(post): octave
 Requires(postun): octave
 
 %description
-This package provides functions to perform a n-dimensional optimal
-interpolations of arbitrarily distributed data points with Octave.
+An optimal interpolation toolbox providing functions to perform a
+n-dimensional optimal interpolations of arbitrarily distributed data
+points.
 
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
+#{_metainfodir}/*.metainfo.xml
 
 #---------------------------------------------------------------------------
 
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 export CC=gcc
